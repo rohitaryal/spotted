@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Sans-Regular";
+  src: url(/product-sans/sans-regular.ttf);
+
+}
+
+@font-face {
+  font-family: "Sans-Italic";
+  src: url(/product-sans/sans-italic.ttf);
+}
+
+@font-face {
+  font-family: "Sans-Bold";
+  src: url(/product-sans/sans-bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sans-Regular";
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url('./src/assets/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3em;
+}
