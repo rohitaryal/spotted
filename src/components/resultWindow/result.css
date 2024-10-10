@@ -112,9 +112,10 @@
     color: white;
     cursor: pointer;
     font-weight: bolder;
-    border: 2px solid white;
-    background-color: rgb(132, 0, 255);
+    background-color: transparent;
+    border: 1px solid white;
     transition: .1s;
+    margin-bottom: .5em;
 }
 
 .main-result-container button:hover {

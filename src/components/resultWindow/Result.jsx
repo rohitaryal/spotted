@@ -1,15 +1,18 @@
 import "./result.css";
 import { PiInfoLight } from "react-icons/pi";
 import { IoPersonOutline } from "react-icons/io5";
+import { useContext } from "react";
+import { ResultContext } from "../../App";
 
 const Result = () => {
+    const { student_id, roll_no, name, phone, email, Program_Description } = useContext(ResultContext)
     return <>
         <div className="main-result-container">
             <div className="result-window-container">
                 <div className="result-top-bar">
                     <IoPersonOutline className="person-outline" />
                     &gt;
-                    <div id="searched-roll">22054403</div>
+                    <div id="searched-roll">{roll_no || "Empty"}</div>
                     &gt;
                     <div className="normal-text">Details</div>
                 </div>
@@ -18,27 +21,27 @@ const Result = () => {
                     <table>
                         <tr>
                             <th>Name</th>
-                            <td id="student-name">Rohit Sharma</td>
+                            <td id="student-name">{name || "UNKNOWN"}</td>
                         </tr>
                         <tr>
                             <th>Program</th>
-                            <td id="program">B.Tech Computer Science and Engin. 2022</td>
+                            <td id="program">{Program_Description || "UNKNOWN"}</td>
                         </tr>
                         <tr>
                             <th>Roll Number</th>
-                            <td id="roll">2205423</td>
+                            <td id="roll">{roll_no || "UNKNOWN"}</td>
                         </tr>
                         <tr>
                             <th>Student Number</th>
-                            <td id="student-number">1000162053</td>
+                            <td id="student-number">{student_id || "UNKNOWN"}</td>
                         </tr>
                         <tr>
                             <th>Phone Number</th>
-                            <td id="phone-number">765524272</td>
+                            <td id="phone-number">{phone || "UNKNOWN"}</td>
                         </tr>
                         <tr>
                             <th>Email</th>
-                            <td id="email">somemail@gmail.com</td>
+                            <td id="email">{email || "UNKNOWN"}</td>
                         </tr>
                     </table>
                     <div className="misc-container">
