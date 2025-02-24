@@ -24,7 +24,7 @@ const Search = () => {
 }
 
 const Fetch = (rollNumber) => {
-    let fetchUrl = "https://ddos.erucix.workers.dev/?roll=" + rollNumber;
+    let fetchUrl = "https://ddos.******.workers.dev/?roll=" + rollNumber;
     return fetch(fetchUrl);
 }
 
